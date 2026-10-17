@@ -1,0 +1,5 @@
+{
+  "name": "SmartStock",
+  "description": "A comprehensive inventory management system featuring real-time stock tracking, transaction history, an AI-powered Smart Assistant, and a secure Admin Dashboard for staff account management.",
+  "requestFramePermissions": []
+}

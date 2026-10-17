@@ -1,0 +1,199 @@
+/* Global Reset and Base Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #020617;      /* Deepest background */
+  --bg-card: #0f172a;      /* Distinct card color */
+  --bg-input: #1e293b;
+  --bg-hover: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #6366f1;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --border: rgba(255, 255, 255, 0.05);
+  --radius-xl: 1.5rem;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Aggressive Overrides for Tailwind Utility Classes */
+.bg-slate-50, .bg-gray-50 {
+  background-color: var(--bg-dark) !important;
+}
+
+.bg-white, .bg-slate-100, .bg-gray-100 {
+  background-color: var(--bg-card) !important;
+}
+
+/* Status-specific backgrounds (Dark mode friendly) */
+.bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+.bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+.bg-indigo-50 {
+  background-color: rgba(99, 102, 241, 0.1) !important;
+}
+.bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+}
+
+.text-slate-900, .text-slate-800, .text-slate-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-slate-600, .text-slate-500, .text-slate-400 {
+  color: var(--text-secondary) !important;
+}
+
+.border-slate-200, .border-slate-100, .border {
+  border-color: var(--border) !important;
+}
+
+/* Cards & Sections */
+.bg-white.rounded-xl {
+  border-radius: var(--radius-xl) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Specific Table Hover Effect */
+.hover\:bg-slate-50:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Forms & Inputs */
+input, select, textarea {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border) !important;
+  color: #ffffff !important;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.75rem;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--bg-card) !important;
+}
+
+th {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  color: var(--text-secondary) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  font-size: 0.875rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Sidebar & Navigation */
+aside {
+  background-color: var(--bg-card) !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+nav button {
+  background-color: transparent !important;
+  margin-bottom: 0.5rem;
+}
+
+nav button.bg-indigo-50 {
+  background: var(--accent-gradient) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Badges */
+.badge-restock {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.badge-healthy {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Chart Styles */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #334155;
+}
+
+.recharts-text {
+  fill: #94a3b8 !important;
+}

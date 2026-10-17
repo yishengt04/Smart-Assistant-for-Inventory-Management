@@ -1,4 +1,4 @@
-# Smart Inventory Management Assistant
+# Smart Inventory Pro
 
 An inventory management system built with React 19, Vite, TypeScript, Neon Serverless PostgreSQL, Firebase Authentication, and Google Gemini AI.
 
