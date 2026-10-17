@@ -1,13 +1,9 @@
 import { neon } from 'https://esm.sh/@neondatabase/serverless@0.10.4';
 
-/**
- * PASTE YOUR NEON URL HERE
- */
+/* Paste Neon URL */
 const DB_URL: string = ''; 
 
-/**
- * Gets the database URL from hardcoded variable, environment, or localStorage.
- */
+/* Gets the database URL from hardcoded variable, environment, or localStorage. */
 export const getDatabaseUrl = () => {
   // 1. Highest Priority: The hardcoded variable above
   if (DB_URL && DB_URL.trim() !== "") {
